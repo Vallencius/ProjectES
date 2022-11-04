@@ -64,7 +64,7 @@
           </li>
 
           <li>
-            <a href="kategori.php">
+            <a href="/diagnosis">
               <i class="fa fa-folder"></i> <span>Diagnosis</span>
             </a>
           </li>

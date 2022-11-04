@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Models\Symptom;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('content.dashboard');
+});
+
+
+Route::get('/diagnosis', function () {
+    $symptoms = Symptom::groupBy('KodeGejala')->get();
+    return view('content.diagnosis', ['symptoms' => $symptoms]);
 });
