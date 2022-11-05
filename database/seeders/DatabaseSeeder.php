@@ -886,28 +886,28 @@ class DatabaseSeeder extends Seeder
         ]);
         Symptom::create([
             'KodeGejala' => 'G32',
-            'NamaGejala' => 'Weird Talk',
+            'NamaGejala' => 'Suspicious',
             'KodePenyakit' => 'P01',
             'NamaPenyakit' => 'Depression',
             'CFValue' => 0
         ]);
         Symptom::create([
             'KodeGejala' => 'G32',
-            'NamaGejala' => 'Weird Talk',
+            'NamaGejala' => 'Suspicious',
             'KodePenyakit' => 'P02',
             'NamaPenyakit' => 'PTSD',
             'CFValue' => 0
         ]);
         Symptom::create([
             'KodeGejala' => 'G32',
-            'NamaGejala' => 'Weird Talk',
+            'NamaGejala' => 'Suspicious',
             'KodePenyakit' => 'P03',
             'NamaPenyakit' => 'Anxiety Disorder',
             'CFValue' => 0
         ]);
         Symptom::create([
             'KodeGejala' => 'G32',
-            'NamaGejala' => 'Weird Talk',
+            'NamaGejala' => 'Suspicious',
             'KodePenyakit' => 'P04',
             'NamaPenyakit' => 'Schizofrenia',
             'CFValue' => 0.2

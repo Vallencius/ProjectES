@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SymptomController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Symptom;
@@ -15,12 +16,6 @@ use App\Models\Symptom;
 |
 */
 
-Route::get('/', function () {
-    return view('content.dashboard');
-});
-
-
-Route::get('/diagnosis', function () {
-    $symptoms = Symptom::groupBy('KodeGejala')->get();
-    return view('content.diagnosis', ['symptoms' => $symptoms]);
-});
+Route::get('/', [SymptomController::class, 'index'])->name('home');
+Route::get('/diagnosis', [SymptomController::class, 'diagnosis'])->name('diagnosis');
+Route::post('/diagnosis', [SymptomController::class, 'diagnosisVerify'])->name('diagnosis.verify');

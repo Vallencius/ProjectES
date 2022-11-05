@@ -52,19 +52,16 @@
     </header>
      <aside class="main-sidebar">
       <section class="sidebar">
-      
-
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
-
           <li> 
-            <a href="index.php">
+            <a href="{{ route('home') }}">
               <i class="fa fa-dashboard"></i> <span>Beranda</span>
             </a>
           </li>
 
           <li>
-            <a href="/diagnosis">
+            <a href="{{ route('diagnosis') }}">
               <i class="fa fa-folder"></i> <span>Diagnosis</span>
             </a>
           </li>
@@ -80,9 +77,6 @@
               <i class="fa fa-comment"></i> <span>Keterangan</span>
             </a>
           </li>
-
-
-
         </ul>
       </section>
       <!-- /.sidebar -->

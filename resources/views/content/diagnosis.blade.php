@@ -9,47 +9,48 @@
  
         <div class="box-body">
             <div class="table-responsive">
-              <table class="table table-bordered table-striped" id="table-datatable">
-                <thead>
-                  <tr>
-                    <th width="3%">No</th>
-                    <th>Kode</th>
-                    <th>Gejala</th>
-                    <th>Pilih Kondisi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    @foreach($symptoms as $symptom)
+              <form action={{ route('diagnosis.verify') }} method="POST">
+                <table class="table table-bordered table-striped" id="table-datatable">
+                  <thead>
+                    <tr>
+                      <th width="3%">No</th>
+                      <th>Kode</th>
+                      <th>Gejala</th>
+                      <th>Pilih Kondisi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      @csrf
+                      @foreach($symptoms as $symptom)
                         <tr>
-                        <td>{{$nomor++}}</td>
-                        <td>{{ $symptom->KodeGejala }}</td>
-                        <td>{{ $symptom->NamaGejala }}</td>
-                        <td>
-                            <select name="cars" id="cars">
-                                <option value="">Definitely</option>
-                                <option value="">Almost Certainly</option>
-                                <option value="">Probably</option>
-                                <option value="">Maybe</option>
-                                <option value="">Unknown</option>
-                                <option value="">Maybe Not</option>
-                                <option value="">Probably Not</option>
-                                <option value="">Almost Certainly Not</option>
-                                <option value="">Definitely Not</option>
+                          <td>{{$nomor++}}</td>
+                          <td>{{ $symptom->KodeGejala }}</td>
+                          <td>{{ $symptom->NamaGejala }}</td>
+                          <td>
+                            <select name="{{ $symptom->KodeGejala }}" id="{{ $symptom->KodeGejala }}" class="form-select">
+                              <option value="0" selected>Tidak memiliki gejala</option>
+                              <option value="1.0">Definitely</option>
+                              <option value="0.8">Almost Certainly</option>
+                              <option value="0.6">Probably</option>
+                              <option value="0.4">Maybe</option>
+                              <option value="-0.2">Unknown</option>
+                              <option value="-0.4">Maybe Not</option>
+                              <option value="-0.6">Probably Not</option>
+                              <option value="-0.8">Almost Certainly Not</option>
+                              <option value="-1.0">Definitely Not</option>
                             </select>
-                        </td>
-
+                          </td>
                         </tr>
-                
-
-
-                    @endforeach
-                </tbody>
-              </table>
+                      @endforeach
+                    </form>
+                  </tbody>
+                </table>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+              </form>
             </div>
           </div>
 
       </section>
     </div>
 </div>
- 
 @stop
