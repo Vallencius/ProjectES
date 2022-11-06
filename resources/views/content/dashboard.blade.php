@@ -6,16 +6,26 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  .logo-mental{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .margin-text{
+    margin-top: 5%;
+  }
 </style>
 
   <section class="content">
 
     <div class="row">
-
       <div class="col-lg-3 col-xs-6">
         <div class="small-box bg-green">
           <div class="inner">
-            <h3>32</h3>
+            <h3>{{ $gejala }}</h3>
             <p>Total Gejala</p>
           </div>
           <div class="icon">
@@ -27,7 +37,7 @@
       <div class="col-lg-3 col-xs-6">
         <div class="small-box bg-red">
           <div class="inner">
-            <h3>4</h3>
+            <h3>{{ $penyakit }}</h3>
             <p>Total Penyakit</p>
           </div>
           <div class="icon">
@@ -39,7 +49,7 @@
       <div class="col-lg-3 col-xs-6">
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>57</h3>
+            <h3>{{ $pengetahuan }}</h3>
             <p>Total Pengetahuan</p>
           </div>
           <div class="icon">
@@ -61,18 +71,16 @@
       </div>
     </div>
 
-  </section>
-
    <div class="row">
       <section class="col-lg-12">
           <div class="row">
             <div class="col-lg-6">
-              <img src="img/dashboardimg.jpg" alt="">
+              <img src="{{ asset('images/mental.png') }}" alt="" class="logo-mental">
             </div>
 
-            <div class="col-lg-6">
-
-              <h1>SELAMAT DATANG DI KELOMPOK UAS KAMI</h1>
+            <div class="col-lg-6 text-center margin-text">
+              <h1>SELAMAT DATANG DI PROJECT KELOMPOK UAS KAMI</h1>
+              <h1>-MENTAL HEALTH DIAGNOSYS-</h1>
             </div>
           
           </div>
@@ -80,6 +88,8 @@
 
       </section>
     </div>
+
+  </section>
 
 </div>
 

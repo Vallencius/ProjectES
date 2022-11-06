@@ -44,7 +44,7 @@
               </a>
             </li>
             <li>
-              <a href="logout.php"><i class="fa fa-home"></i>HOME</a>
+              <a href="logout.php"><i class="fa fa-home"></i> HOME</a>
             </li>
           </ul>
         </div>

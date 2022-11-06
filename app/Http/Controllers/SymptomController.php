@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 class SymptomController extends Controller
 {
     public function index(){
-        return view('content.dashboard');
+        $gejala = Symptom::groupBy('KodeGejala')->count();
+        $penyakit = Symptom::groupBy('KodePenyakit')->count();
+        $pengetahuan = Symptom::count();
+        return view('content.dashboard', [
+            'gejala' => $gejala,
+            'pengetahuan' => $pengetahuan,
+            'penyakit' => $penyakit,
+        ]);
     }
 
     public function diagnosis(){
