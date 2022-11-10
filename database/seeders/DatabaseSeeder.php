@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Symptom;
+use App\Models\Treatment;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -911,6 +912,40 @@ class DatabaseSeeder extends Seeder
             'KodePenyakit' => 'P04',
             'NamaPenyakit' => 'Schizofrenia',
             'CFValue' => 0.2
+        ]);
+
+        Treatment::create([
+            'penyakit' => 'Depression',
+            'treatment' => '- Perform routines or establish a positive daily activity schedule.<br/>
+            - Doing exercise regularly to increase endorphins.<br/>
+            - Eat healthy food.<br/>
+            - Enough sleep.<br/>
+            - Forming positive thoughts.<br/>'
+        ]);
+
+        Treatment::create([
+            'penyakit' => 'PTSD',
+            'treatment' => "- Cognitive behavioral therapy, to recognize and change the patient's negative thought patterns.<br/>
+            - Exposure therapy, to help effectively deal with the circumstances and memories that triggered the trauma.<br/>
+            - Eye movement desensitization and reprocessing (EMDR), to direct the patient's focus to certain sounds or object movements when remembering the traumatic event.<br/>"
+        ]);
+
+        Treatment::create([
+            'penyakit' => 'Anxiety Disorder',
+            'treatment' => "- Get enough sleep.<br/>
+            - Active exercise.<br/>
+            - Do ways to practice breathing and controlling emotions.<br/>
+            - Set a healthy diet.<br/>
+            - Avoid smoking and alcohol.<br/>
+            - Limiting the amount of caffeine consumption, such as coffee and tea.<br/>
+            - Conduct counseling sessions if necessary with a psychologist. If it is more severe and requires treatment, counseling sessions are directed through a psychiatrist.<br/>"
+        ]);
+
+        Treatment::create([
+            'penyakit' => 'Schizofrenia',
+            'treatment' => "- Perform Electroconvulsive therapy to relieve suicidal ideation, and effectively treat symptoms of major depression. Therapy is carried out 2-3 times a week for 2-4 weeks, and can be combined with psychotherapy and medication.<br/>
+            - Perform cognitive therapy, which aims to change behavior and thought patterns in sufferers.<br/>
+            - Taking traditional antipsychotic medicine: Phenothiazines, chlorpromazine.<br/>"
         ]);
     }
 }

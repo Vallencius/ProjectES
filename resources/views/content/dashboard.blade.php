@@ -26,7 +26,7 @@
         <div class="small-box bg-green">
           <div class="inner">
             <h3>{{ $gejala }}</h3>
-            <p>Total Gejala</p>
+            <p>Total Symptoms</p>
           </div>
           <div class="icon">
             <i class="ion ion-stats-bars"></i>
@@ -38,7 +38,7 @@
         <div class="small-box bg-red">
           <div class="inner">
             <h3>{{ $penyakit }}</h3>
-            <p>Total Penyakit</p>
+            <p>Total Diseases</p>
           </div>
           <div class="icon">
             <i class="ion ion-pie-graph"></i>
@@ -50,7 +50,7 @@
         <div class="small-box bg-aqua">
           <div class="inner">
             <h3>{{ $pengetahuan }}</h3>
-            <p>Total Pengetahuan</p>
+            <p>Total Knowledge</p>
           </div>
           <div class="icon">
             <i class="ion ion-android-list"></i>
@@ -62,7 +62,7 @@
         <div class="small-box bg-yellow">
           <div class="inner">
             <h3>3</h3>
-            <p>Jumlah Kategori Diskusi</p>
+            <p>Total Discussion</p>
           </div>
           <div class="icon">
             <i class="fa fa-folder"></i>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="col-lg-6 text-center margin-text">
-              <h1>SELAMAT DATANG DI PROJECT KELOMPOK UAS KAMI</h1>
+              <h1>WELCOME TO OUR FINAL PROJECT</h1>
               <h1>-MENTAL HEALTH DIAGNOSYS-</h1>
             </div>
           

@@ -21,12 +21,13 @@
   <link rel="stylesheet" href="{{ asset('css/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
+  <link rel="shorcut icon" href="{{ asset('images/mental.png') }}">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
     <header class="main-header">
-      <a href="index.php" class="logo">
+      <a href="{{ route('home') }}" class="logo">
         <span class="logo-mini"><i class="fa fa-code"></i></span>
         <span class="logo-lg">Expert System UAS</span>
       </a>
@@ -38,13 +39,8 @@
 
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
-
-            <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              </a>
-            </li>
             <li>
-              <a href="logout.php"><i class="fa fa-home"></i> HOME</a>
+              <a href="{{ route('home') }}"><i class="fa fa-home"></i> HOME</a>
             </li>
           </ul>
         </div>
@@ -56,25 +52,25 @@
           <li class="header">Menu</li>
           <li> 
             <a href="{{ route('home') }}">
-              <i class="fa fa-dashboard"></i> <span>Beranda</span>
+              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
           </li>
 
           <li>
             <a href="{{ route('diagnosis') }}">
-              <i class="fa fa-folder"></i> <span>Diagnosis</span>
+              <i class="fa fa-folder"></i> <span>Diagnosys</span>
             </a>
           </li>
 
           <li>
-            <a href="member.php">
-              <i class="fa fa-users"></i> <span>Riwayat</span>
+            <a href="{{ route('history') }}">
+              <i class="fa fa-users"></i> <span>History</span>
             </a>
           </li>
 
           <li>
             <a href="diskusi.php">
-              <i class="fa fa-comment"></i> <span>Keterangan</span>
+              <i class="fa fa-comment"></i> <span>Information</span>
             </a>
           </li>
         </ul>

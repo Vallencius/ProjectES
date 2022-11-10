@@ -19,3 +19,4 @@ use App\Models\Symptom;
 Route::get('/', [SymptomController::class, 'index'])->name('home');
 Route::get('/diagnosis', [SymptomController::class, 'diagnosis'])->name('diagnosis');
 Route::post('/diagnosis', [SymptomController::class, 'diagnosisVerify'])->name('diagnosis.verify');
+Route::get('/history', [SymptomController::class, 'history'])->name('history');

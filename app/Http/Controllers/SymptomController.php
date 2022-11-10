@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\History;
 use App\Models\Symptom;
+use App\Models\Treatment;
 use Illuminate\Http\Request;
 
 class SymptomController extends Controller
@@ -108,22 +110,38 @@ class SymptomController extends Controller
         $value = max($CFCombine1, $CFCombine2, $CFCombine3, $CFCombine4);
         switch($value){
             case $CFCombine1:
-                $penyakit = "Depresi";
+                $penyakit = "Depression";
                 break;
             case $CFCombine2:
                 $penyakit = "PTSD";
                 break;
             case $CFCombine3:
-                $penyakit = "Gangguan Kecemasan";
+                $penyakit = "Anxiety Disorder";
                 break;
             case $CFCombine4:
-                $penyakit = "Skizofrenia";
+                $penyakit = "Schizofrenia";
                 break;
         }
 
+        if($request['nama'] == null) $request['nama'] = 'Anonymous';
+
+        $history['nama'] = $request['nama'];
+        $history['penyakit'] = $penyakit;
+        $history['value'] = $value;
+
+        History::create($history);
+
         return view('content.result', [
             'penyakit' => $penyakit,
-            'value' => $value
+            'value' => $value,
+            'treatment' => Treatment::All()->where('penyakit', '=', $penyakit)->value('treatment')
+        ]);
+    }
+
+    public function history(){
+        return view('content.history', [
+            'items' => History::All(),
+            'treatment' => Treatment::All()
         ]);
     }
 }
