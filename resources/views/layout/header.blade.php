@@ -33,10 +33,6 @@
       </a>
 
       <nav class="navbar navbar-static-top">
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <li>
@@ -69,7 +65,7 @@
           </li>
 
           <li>
-            <a href="diskusi.php">
+            <a href="{{ route('info') }}">
               <i class="fa fa-comment"></i> <span>Information</span>
             </a>
           </li>

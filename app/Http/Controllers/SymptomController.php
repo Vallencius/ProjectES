@@ -141,7 +141,11 @@ class SymptomController extends Controller
     public function history(){
         return view('content.history', [
             'items' => History::All(),
-            'treatment' => Treatment::All()
+            'treatments' => Treatment::All()
         ]);
+    }
+
+    public function info(){
+        return view('content.info');
     }
 }
