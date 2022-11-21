@@ -61,7 +61,7 @@
       <div class="col-lg-3 col-xs-6">
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h3>3</h3>
+            <h3>{{ $discussion }}</h3>
             <p>Total Discussion</p>
           </div>
           <div class="icon">

@@ -13,10 +13,12 @@ class SymptomController extends Controller
         $gejala = Symptom::groupBy('KodeGejala')->count();
         $penyakit = Symptom::groupBy('KodePenyakit')->count();
         $pengetahuan = Symptom::count();
+        $discussion = History::All()->count();
         return view('content.dashboard', [
             'gejala' => $gejala,
             'pengetahuan' => $pengetahuan,
             'penyakit' => $penyakit,
+            'discussion' => $discussion,
         ]);
     }
 
@@ -123,6 +125,12 @@ class SymptomController extends Controller
                 break;
         }
 
+        $CF[0] = $CFCombine1*100;
+        $CF[1] = $CFCombine2*100;
+        $CF[2] = $CFCombine3*100;
+        $CF[3] = $CFCombine4*100;
+        $value = $value*100;
+
         if($request['nama'] == null) $request['nama'] = 'Anonymous';
 
         $history['nama'] = $request['nama'];
@@ -134,6 +142,7 @@ class SymptomController extends Controller
         return view('content.result', [
             'penyakit' => $penyakit,
             'value' => $value,
+            'CF' => $CF,
             'treatment' => Treatment::All()->where('penyakit', '=', $penyakit)->value('treatment')
         ]);
     }

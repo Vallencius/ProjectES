@@ -19,7 +19,7 @@
         <td>{{ $i++ }}</td>
         <td>{{ $item->nama }}</td>
         <td>{{ $item->penyakit }}</td>
-        <td>{{ $item->value }}</td>
+        <td>{{ $item->value }} %</td>
       </tr>
     @endforeach
   </tbody>
